@@ -1,0 +1,116 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: #e5e6e0;
+
+}
+
+.textoPrincipal {
+  width: 60%; /* Ancho del contenedor */
+  margin: 0 auto; /* Centrar horizontalmente */
+  padding: 20px; /* Espacio interior del contenedor */
+}
+
+/* Estilo para el párrafo dentro del contenedor */
+.textoPrincipal p {
+  text-align: justify; /* Justificación del texto */
+}
+
+.menu-button {
+  transition: background-color 0.5s ease; /* Transición de 0.5 segundos para el color de fondo */
+  font-weight: bold;
+}
+
+.menu-button:active {
+  background-color: #fc8a80; /* Cambia el color de fondo al hacer clic */
+}
+/* Define una transición para mover ligeramente el botón */
+.menu-button:hover {
+  transform: translateX(5px); /* Mueve el botón 5px hacia la derecha al pasar el ratón por encima */
+  transition: transform 0.3s ease; /* Duración de la transición y efecto de suavizado */
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.titulo {
+  animation: slideIn 2s ease-in-out; /* Ajusta la duración y el efecto según tus preferencias */
+  color: #1f4a64;
+  font-weight: bold;
+  
+}
+.tituloSecundario {
+  animation: slideInRight 2s ease-in-out; /* Ajusta la duración y el efecto según tus preferencias */
+  color: #3c8cbd;
+}
+/* Define una animación llamada "rebote" */
+@keyframes rebote {
+  0%, 100% {
+    transform: translateY(0); /* Estado inicial y final (sin desplazamiento) */
+  }
+  50% {
+    transform: translateY(-30px); /* Punto medio, desplazamiento hacia arriba */
+  }
+}
+
+.imagenDidac img{
+  max-width: 300px;
+  height: auto; /* Esto mantiene la relación de aspecto original */
+  margin-bottom: 20px;
+  animation: rebote 1s ease-in-out 2s; /* Ajusta la duración y el efecto según tus preferencias */
+  border-radius: 30%; /* 50% crea un borde completamente redondeado */
+}
+.imagenLogo{
+  max-width: 70px;
+  height: auto;
+}
+
+
+
+
+
+/* 
+.color1 { #3c8cbd };
+.color2 { #80b2d1 };
+.color3 { #1f4a64 };
+.color4 { #777774 };
+.color5 { #e5e6e0 }; 
+*/
